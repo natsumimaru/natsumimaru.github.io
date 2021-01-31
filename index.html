@@ -1,0 +1,376 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width,initial-scale=1">
+	<title>福岡さんぽ【Sampo】</title>
+
+	<!-- css -->
+	<link rel="stylesheet" type="text/css" href="style.css" media="all">
+	<link rel="stylesheet" type="text/css" href="reset.min.css" media="all">
+
+
+	<!--ファビコン-->
+	<link rel="icon" href="favicon.ico">
+	<link rel="icon" type="image/png" href="images/favicon.png">
+
+<!--font awesome-->
+	<link href="https://use.fontawesome.com/releases/v5.6.1/css/all.css" rel="stylesheet">
+
+
+	<!--Smooth Scroll（ページ内リンクへぬるっと）を読み込む-->
+	<script src="smooth-scroll.min.js"></script>
+	<script>
+		var scroll = new SmoothScroll('a[href*="#"]');
+	</script>
+
+	<!-- Scroll Reveal（ふわっと表示）を読み込む-->
+	<script src="https://unpkg.com/scrollreveal"></script>
+	<script>
+		ScrollReveal().reveal('.sampo_box');
+	</script>
+
+	<!-- 🍔メニュークリックしたら閉じる-->
+	<script>
+	 	$('.drawer_menu a[href]').on('click', function(event) {
+        $('.drawer').trigger('click');
+    	});
+	</script>
+</head>
+
+
+
+<body>
+	<!-------------------🍔------------------------->
+	<div class="drawer" id="drawer">
+		<input class="drawer_checkbox" id="drawerCheckbox" type="checkbox" >
+
+		<!-- ドロワーアイコン部分 -->
+		<label class="drawer_icon" for="drawerCheckbox">
+			<span class="drawer_icon-item"></span>
+		</label>
+
+		<!-- 背景を暗く -->
+		<label class="drawer_overlay" for="drawerCheckbox"></label>
+
+		<!-- ドロワー内のメニュー -->
+		<div class="drawer_menu" id="drawer_menu">
+			<ul>
+				<li>
+					<a href="#sampo_park"><i class="fas fa-bicycle"></i>&nbsp;&nbsp;公園さんぽ</a>
+				</li>
+				<li>
+					<a href="#sampo_sea"><i class="fas fa-anchor"></i>&nbsp;&nbsp;海さんぽ</a>
+				</li>
+				<li>
+					<a href="#sampo_island"><i class="fas fa-fish"></i>&nbsp;&nbsp;島さんぽ</a>
+				</li>
+				<li>
+					<a href="#sampo_nighttown"><i class="fas fa-cocktail"></i>&nbsp;&nbsp;夜さんぽ</a>
+				</li>
+				<li>
+					<a href="#hotel"><i class="fas fa-bed"></i>&nbsp;&nbsp;泊まるとこ</a>
+				</li>
+				<li>
+					<a href="https://www.sampo-futari.com/" target="_blank"><i class="fas fa-home"></i></i>&nbsp;&nbsp;Sampoへ戻る</a>
+				</li>
+			</ul>
+		</div><!--drawer_menu-->
+	</div><!--drawer-->
+
+
+		<!------------main_visual------------------>
+	<div id="main_visual">
+		<video src="images/opening.mp4" autoplay muted loop></video>
+		<h1>
+			<img class="main_ttl" alt="福岡さんぽ" src="images/main_ttl.png">
+		</h1>
+	</div><!--main_visual-->
+
+
+	<div class="container">
+		<!-----------groval nav------------------------->
+		<div class="gnav">
+			<ul>
+				<li>
+					<a href="#sampo_park"><img src="images/gnav_park.png" alt="公園さんぽ" onmouseover="this.src='images/gnav_park_hover.png'" onmouseout="this.src='images/gnav_park.png'"></a>
+				</li>
+				<li>
+					<a href="#sampo_sea"><img src="images/gnav_sea.png" alt="海さんぽ" onmouseover="this.src='images/gnav_sea_hover.png'" onmouseout="this.src='images/gnav_sea.png'"></a>
+				</li>
+				<li>
+					<a href="#sampo_island"><img src="images/gnav_island.png" alt="島さんぽ" onmouseover="this.src='images/gnav_island_hover.png'" onmouseout="this.src='images/gnav_island.png'"></a>
+				</li>
+				<li>
+					<a href="#sampo_nighttown"><img src="images/gnav_nighttown.png" alt="夜さんぽ" onmouseover="this.src='images/gnav_nighttown_hover.png'" onmouseout="this.src='images/gnav_nighttown.png'"></a>
+				</li>
+				<li>
+					<a href="#hotel"><img src="images/gnav_sleep.png" alt="予約" onmouseover="this.src='images/gnav_sleep_hover.png'" onmouseout="this.src='images/gnav_sleep.png'"></a>
+				</li>
+			</ul>
+		</div><!--gnav-->
+
+
+		<main>
+			<!----------------<<Intro>>福岡の魅力-------------------->
+			<div class="intro">
+				<div class="intro_img">
+					<img src="images/intro_img.png">
+				</div>
+								<div class="intro_txt">
+					<p>
+						九州の玄関口、福岡。<br>
+						程よい都会と、隣り合わせのたくさんの自然が<br>
+						魅力的なこの都市は近年移住者も増えてきている。<br>
+						東京や大阪に比べると、<br>
+						格段にコンパクトなこの街には、<br>
+						少し場所を変えるだけで、<br>
+						たくさんのおさんぽスポットが詰まっている。<br>
+						<br>
+						日頃の喧騒を忘れて、ふたりでおさんぽしに来ませんか？
+					</p>
+					<div class="pc_intro_ttl">
+						<img src="images/intro_ttl.png">
+					</div>
+					<div class="sp_intro_ttl">
+						<img src="images/sp_intro_ttl.png">
+					</div>
+				</div><!--intro_txt-->
+			</div><!--intro-->
+
+			<!---------------<<Sampo>>公園さんぽ-------------------->
+			<div class="sampo_box" id="sampo_park">
+				<div class="sampo_main">
+					<div class="sampo_main_ttl">
+						<img src="images/park_ttl.png">
+					</div>
+					<div class="sampo_main_ttl_sp">
+						<img src="images/sp_park_ttlimg.png">
+					</div>
+					<div class="sampo_main_contents">
+						<img src="images/park_img.png" class="pc">
+						<p>
+							地下鉄で、博多からは５駅9分、天神からは２駅4分で到着する、福岡のセントラルパーク（ネーミングがダサい）大濠公園。ここは福岡でも随一のデートスポットだ。<br>
+							<br>
+							朝デートなら、絶対に大濠公園がおすすめ。近くのパン屋で朝ごはんを買い、公園のベンチで食べる。そんなシーンがなにかのドラマでもあったっけ？池に住む、鯉や亀、様々な鳥たちを見ながらまったりする時間は格別。最高の1日の幕開けだ。
+						</p>
+					</div>
+				</div>
+				<div class="sampo_sub">
+					<div class="sampo_sub_ttl">
+						<img src="images/park_sub_ttl.png">
+						<img src="images/park_sub_img.png" class="sp">
+						<div class="p">
+							<p>
+								ここは、ただミスドのじゃない。可愛さが尋常だ。今となっては珍しい、建物まるまるミスドなのである。
+								<br>このような店舗は、バブル期に展開されたが、現在生き残っているのは全国で３店舗だけだそう。80年代のアメリカの遊園地をイメージしたような店内の装飾は、ふたりが可愛い写真をとるためにあるかのよう。<br>
+								外気が厳しいときにはミスドでまったり朝ごはんもあり。
+							</p>
+						</div>
+					</div>
+					<div class="sampo_sub_contents">
+						<img src="images/park_sub_img.png" class="pc">
+					</div>
+				</div>
+			</div>
+
+
+			<!----------------<<Sampo>>海さんぽ-------------------->
+			<div class="sampo_box_b" id="sampo_sea">
+				<div class="sampo_main">
+					<div class="sampo_main_ttl">
+						<img src="images/sea_ttl.png">
+					</div>
+					<div class="sampo_main_ttl_sp">
+						<img src="images/sp_sea_ttlimg.png">
+					</div>
+					<div class="sampo_main_contents">
+						<img src="images/sea_img.png" class="pc">
+						<p>
+							『福岡』と検索すればだいたい出てくる、ドームとタワーと海の写真。
+							<br>この海が「ももち浜」である。地下鉄「唐人町」から約徒歩15分、バスは各所から出ている。
+							<br>
+							<br>ももち浜さんぽに行くなら、俄然夕方がおすすめである。日が落ちていくタイミングで現れる、あらゆる色の空。オレンジの日もあればピンクや紫の日もある、美しい夕空は言葉に換え難い。近くのコンビニで買った缶ビールをだらりと飲みながら、ふたりで眺める夕日は、最高でしかない。　
+						</p>
+					</div>
+				</div>
+				<div class="sampo_sub">
+					<div class="sampo_sub_ttl">
+						<img src="images/sea_sub_ttl.png">
+						<img src="images/sea_sub_img.png" class="sp">
+						<div class="p">
+							<p>
+								福岡のシンボル、「福岡タワー」。
+								<br>全国各地のタワーの類に比べると、一見ビルの様でタワーらしくはないが、れっきとした福岡の観光名所タワーである。
+								<br>とはいえ、人は多くなく穴場だ。ふたりでだらだら景色を見るにはうってつけである。
+								<br>夜は毎日イルミネーションが彩られ、季節によって異なる柄は福岡市民を楽しませている。中からの景色を楽しんだ後は、外からの景色も楽しんでほしい。
+							</p>
+						</div>
+					</div>
+					<div class="sampo_sub_contents">
+						<img src="images/sea_sub_img.png" class="pc">
+					</div>
+				</div>
+			</div>
+
+			<!----------------<<Sampo>>島さんぽ-------------------->
+			<div class="sampo_box" id="sampo_island">
+				<div class="sampo_main">
+					<div class="sampo_main_ttl">
+						<img src="images/island_ttl.png">
+					</div>
+					<div class="sampo_main_ttl_sp">
+						<img src="images/sp_island_ttlimg.png">
+					</div>
+					<div class="sampo_main_contents">
+						<img src="images/island_img.png" class="pc">
+						<p>
+							こちらは、1日かけてのゆっくりさんぽスポット「能古島」。
+							<br>天神/博多からバスで約20分かけて渡船場へ行き、そこから約5分船に乗り到着するのがここ、「能古島」である。ちょっと船に乗るだけで、時空が変わった様な感覚を味わえるレトロな島だ。
+							<br>メインスポットは「能古島アイランドパーク」。季節によって様々な植物を楽しめる公園だ。たくさんのお花と海のコラボレーションが目に飛び込んだ瞬間、心が大踊りし始める。ふたりでたくさん写真をとって、アルバムに残せば、いつ見返しても華やかな思い出が残る。
+						</p>
+					</div>
+				</div>
+				<div class="sampo_sub">
+					<div class="sampo_sub_ttl">
+						<img src="images/island_sub_ttl.png">
+						<img src="images/island_sub_img.png" class="sp">
+						<div class="p">
+							<p>
+								能古島名物、「能古うどん」。
+								<br>細麺でコシのあるうどんは、ほどよいのどごしがたまらない。冬は釜揚げ、夏は冷やしを食べたいかな。
+								<br>市内にも店舗をだしており、福岡市民にも馴染み深い能古うどん。どうせなら発祥の地で食べたいものだ。公園内に店舗を構える「耕ちゃんうどん」。歩き疲れた頃、ちょっと休憩におすすめだ。
+							</p>
+						</div>
+					</div>
+					<div class="sampo_sub_contents">
+						<img src="images/island_sub_img.png" class="pc">
+					</div>
+				</div>
+			</div>
+
+			<!----------------<<Sampo>>夜さんぽ-------------------->
+			<div class="sampo_box_b" id="sampo_nighttown">
+				<div class="sampo_main">
+					<div class="sampo_main_ttl">
+						<img src="images/nighttown_ttl.png">
+					</div>
+					<div class="sampo_main_ttl_sp">
+						<img src="images/sp_nt_ttlimg.png">
+					</div>
+					<div class="sampo_main_contents">
+						<img src="images/nighttown_img.png" class="pc">
+						<p>
+							福岡の夜の街、中洲。天神との境にある、那珂川沿いは絶好の夜のさんぽ道だ。
+							<br>華やかなネオンとお姉さんたち、名物の屋台軍、客引きのお兄さん etc...カオスな街だけど、それもふたりで見るとなんだかとても楽しい。
+							<br>実はこの街には、福岡のお手頃な美味しいご飯や、軒を連ねる。桝本の辛麺、山ちゃんの胡麻鯖、月や、一双、一蘭、海鳴などの福岡を代表するラーメンたち、桃園の手羽先、お通の雑炊、酒一番のカレー鍋、元祖鉄鍋餃子etc..挙げ始めたらキリがない。グルメ食べ歩きに夜の中洲へぜひ。
+						</p>
+					</div>
+				</div>
+				<div class="sampo_sub">
+					<div class="sampo_sub_ttl">
+						<img src="images/nighttown_sub_ttl.png">
+						<img src="images/nighttown_sub_img.png" class="sp">
+						<div class="p">
+							<p>
+								 「ふたりが楽しめる中洲スポット」と言われれば、1番に思い浮かぶのが、ここMitsubachiだ。お酒も料理も楽しめ、全長30メートルもある開放的なリバービューが、中洲感を味わえる。静かでもなく、うるさくもなく、高くもなく、安くもなく、はじめてでも楽しめる夜の店という感じではないだろうか。
+								 <br>1日の締めはぜひこちらにて。
+							</p>
+						</div>
+					</div>
+					<div class="sampo_sub_contents">
+						<img src="images/nighttown_sub_img.png" class="pc">
+					</div>
+				</div>
+			</div>
+
+			<!------------------<<Othrer>>ホテル-------------------->
+			<div class="hotel" id="hotel">
+				<h1>
+					<img src="images/hotel_ttl.png">
+				</h1>
+				<div class="hotel_box">
+					<div class="hotel_ttl_sp">
+						<img src="images/hotel_01_ttl.png" class="sp">
+					</div>
+					<div class="hotel_img">
+						<img src="images/hotel_01_img.png">
+					</div>
+					<div class="hotel_txt">
+						<img src="images/hotel_01_ttl.png" class="pc">
+						<p>
+							中心街から車で約20分、国定公園「海の中道」内に位置するこのホテルは、海・空・光・緑が織りなす自然の絶景に囲まれながら、ラグジュアリーな非日常の空間を味わえる。
+							<br>季節に合わせたイベントやアクティビティも豊富で、このホテルだけで1日過ごせちゃいそう。周りには、公園や水族館、動物園など施設も充実。
+							<br>博多駅から無料のシャトルバスも出ているので、交通アクセスもGOOD。
+						</p>
+						<div class="hotel_btn">
+						<a href="https://www.luigans.com/room/" target="_blank">予約はこちらから</a>
+						</div>
+						
+					</div>
+				</div>
+				<div class="hotel_box">
+					<div class="hotel_ttl_sp">
+						<img src="images/hotel_02_ttl.png" class="sp">
+					</div>
+					<div class="hotel_img">
+						<img src="images/hotel_02_img.png">
+					</div>
+					<div class="hotel_txt">
+						<img src="images/hotel_02_ttl.png" class="pc">
+						<p>
+							こちらは博多駅から徒歩5分の場所にある、都市の中心部にありながら、喧騒から解き放たれたアーバンリゾートホテル。
+							<br>一歩足を踏み入れると、そこには贅沢な癒しの空間が広がる。インテリア、音楽、アート、料理…。
+							<br>こちらのホテルの目玉はなんといって料理。博多近郊の旬な食材を厳選し、素材の魅力を生かした味付けで、洗練された料理たちを楽しめる。
+						</p>
+						<div class="hotel_btn">
+						<a href="https://www.withthestyle.com/room/" target="_blank">予約はこちらから</a>
+						</div>
+					</div>
+				</div>
+				<div class="hotel_box">
+					<div class="hotel_ttl_sp">
+						<img src="images/hotel_03_ttl.png" class="sp">
+					</div>
+					<div class="hotel_img">
+						<img src="images/hotel_03_img.png">
+					</div>
+					<div class="hotel_txt">
+						<img src="images/hotel_03_ttl.png" class="pc">
+						<p>
+							博多駅から車で15分、名前の通り山の上にあるホテル。
+							<br>喧噪から離れた高台の木々に囲まれた、市内を一望できる随一のロケーションに位置する。和室や天然温水浴場を備えた、旅館スタイルの寛ぎがここにある。
+							<br>博多駅から無料シャトルバスも出ているので、アクセスはご心配なく。
+						</p>
+						<div class="hotel_btn">
+						<a href="https://agorafukuoka-hilltop.com/" target="_blank">予約はこちらから</a>
+						</div>
+					</div>
+				</div>
+			</div><!--hotel-->
+
+			<p class="pagetop">
+				<a href="#main_visual" title="ページトップへ戻る"><img src="images/top_btn.png"></a>
+			</p>
+
+		</main>
+	</div><!--containder-->
+
+<!------------------footer-------------------->
+	<footer>
+			<a href="https://www.sampo-futari.com/" target="_blank"><img src="images/presentedby.png"></a>
+		<p>©️maru design 2020</p>
+	</footer>
+
+
+	<script>
+		
+	</script>
+
+	<script>
+		
+	</script>
+
+</body>
